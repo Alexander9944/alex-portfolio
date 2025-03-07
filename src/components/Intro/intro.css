@@ -1,0 +1,142 @@
+#intro{
+    height: calc(100vh - 4rem);
+    width: 100vw;
+    max-width: 75rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+        
+
+}
+.bg{
+   
+    position: absolute;
+    top: 1rem 1rem;
+    right:0 ;
+    z-index: -1;
+    object-fit: cover;
+    height: 100vh;
+    
+    
+}
+.introContent{
+    
+    height: 100vh;
+    width: 100vw;
+    padding: 1rem;
+    font-size: 5rem;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute; 
+    top: 60%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    background: #262626 -webkit-gradient(linear, left top, right top, from(#262626), to(#262626), color-stop(0.5, #fff)) 0 0 no-repeat;
+    -webkit-background-size: 150px ;
+    background-size: 75px ;
+    color:rgb(255, 255, 255, 0.1);
+    background-clip: text;
+    animation: animate 5s infinite;
+    font-family: bignoodletitling;
+
+}
+.hello{
+    font-size: 1.75rem;
+    font-weight: 150;
+
+     }
+.desktopMenuBtn{
+        background:white;
+        color:black;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1rem;
+        border-radius:2rem ;
+    }
+
+
+
+.introName{
+    color:aqua;
+
+}
+.btnContainer{
+    display: flex;
+    gap: 1rem;
+}
+.introPara{
+    font-size: medium;
+    font-weight :300;
+    letter-spacing: 1px;
+    margin: 0rem 0;
+
+}
+.btn{
+    
+    background: white;
+    margin: 0rem 0rem 0rem 0rem ;
+    padding: 0.75rem 1.5rem ;
+    border: none;
+    border-radius :2rem;
+    cursor: pointer;
+    
+}
+.btn:hover{
+    color: aqua;
+    transform: rotate(10deg);
+}
+.resumeBtn:hover , .downloadBtn:hover{
+    color: aqua;
+    transform: rotate(10deg);
+}
+.resumeBtn{
+    
+    background: white;
+    margin: 1rem 0;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius :2rem;
+    cursor: pointer;
+    
+}
+.btnImg{
+    object-fit: cover;
+    margin: 0 0.25rem;
+    height: 1rem;
+}
+.downloadBtn{ 
+    object-fit: cover;
+    margin: 0 0.25rem;
+    height: 1rem;
+
+}
+@media screen and (max-width:840px) {
+    .bg{
+        right:4vw;
+    }
+    .introContent{
+        font-size: 10vw;
+    }
+    .hello{
+        font-size: 4.5rem;
+    } 
+}
+@keyframes animate{
+    0%,10%{
+        background-position: -1000px;
+    }
+    20%{
+        background-position: top left;
+    }
+    90%{
+        background-position: top right;
+    }
+    100%{
+        background-position: 1000px;
+    }
+}
+
