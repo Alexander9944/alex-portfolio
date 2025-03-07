@@ -1,77 +1,118 @@
-#skills {
-    overflow: hidden;
-    width: 100vw;
-    max-width: 65rem;
-    display :flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+/* General Styling */
+.skills-container {
     text-align: center;
-    margin: 0 auto;
-}
-.skillTitle{
-    font-size: 3rem;
-    font-weight: 600;
-    padding-top: 3rem;
-    margin-bottom: 1.5rem;
-
-
-}
-.skillDesc {
-    font-weight: 400;
-    font-size: 0.9rem;
-    max-width: 50rem;
-    padding: 0 2rem;
-}
-#skills{
-    padding: 2rem;
+    padding: 50px 20px; /* Adjusted padding for better responsiveness */
+    background-color: #222;
+    color: white;
+    overflow: hidden;
+  }
+  
+  /* Skill Title */
+  .skillTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  /* Skill Description */
+  .skillDesc {
+    font-size: 1rem;
+    max-width: 90%;
+    margin: 0 auto 20px;
+    display: block;
+    text-align: center;
+    line-height: 1.5;
+  }
+  
+  /* Scrolling Container */
+  .skills-slider {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.skillDesc , .skillTitle{
-justify-content: center;
-padding: 0 2rem ;
-
-}
-.skillDesc:hover {
-    color: aqua;
-    transform : scale(1.2);
-    overflow: hidden; /* Ensures the image doesn't overflow its container */
-    display: inline-block; /* Adjust based on your layout needs */
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
     position: relative;
-    width: 700px; /* Set a desired width */
-    height: 100px;
-    transition: transform 1.5s ease;
-    padding-bottom: 50px;
-    
-}
-.skillTitle:hover{
-    color: aqua;
-    transform : scale(1.2);
-    overflow: hidden; /* Ensures the image doesn't overflow its container */
-    display: inline-block; /* Adjust based on your layout needs */
-    position: relative;
-    width: 200px; /* Set a desired width */
-    height: 100px;
-    transition: transform 1.5s ease;
-    
-}
-@media screen and (max-width: 720px){
-    .skillDesc>p{
-        font-size: 2vw;
-
+    padding: 10px 0;
+  }
+  
+  /* Wrapper for Continuous Scrolling */
+  .skills-slide-track {
+    display: flex;
+    width: 200%; /* Double width for infinite effect */
+    animation: scrollLeft 15s linear infinite;
+  }
+  
+  /* Pause animation on hover */
+  .skills-slider:hover .skills-slide-track {
+    animation-play-state: paused;
+  }
+  
+  /* Icons */
+  .icon {
+    width: 70px;
+    height: auto;
+    margin: 10px 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Hover Effect */
+  .icon:hover {
+    transform: scale(1.7);
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+  }
+  
+  /* Animation for sliding effect */
+  @keyframes scrollLeft {
+    from {
+      transform: translateX(0);
     }
-    
-}
-@media screen and (max-width: 480px){
-    .skillDesc>p{
-        font-size: 3vw;
+    to {
+      transform: translateX(-50%);
     }
-    
-    
-}
-
-
- 
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 1024px) {
+    .skillTitle {
+      font-size: 1.8rem;
+    }
+    .skillDesc {
+      font-size: 0.95rem;
+      max-width: 95%;
+    }
+    .icon {
+      width: 60px;
+      margin: 8px 15px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .skillTitle {
+      font-size: 1.6rem;
+    }
+    .skillDesc {
+      font-size: 0.9rem;
+      max-width: 100%;
+    }
+    .icon {
+      width: 50px;
+      margin: 6px 10px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .skillTitle {
+      font-size: 1.4rem;
+    }
+    .skillDesc {
+      font-size: 0.85rem;
+      max-width: 100%;
+      padding: 0 10px;
+    }
+    .icon {
+      width: 45px;
+      margin: 5px 8px;
+    }
+  }
   
