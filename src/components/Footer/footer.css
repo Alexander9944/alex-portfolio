@@ -1,12 +1,58 @@
+/* Footer Styles */
 .footer {
-    width: 100vw;
-    height: 4rem;
-    background: rgb(40,40,40);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 300;
-    font-size: small;
-    
-
-}
+    background-color: #222; /* Dark background */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    position: relative;
+  }
+  
+  /* Scroll to Top Button Styles (Rounded Square) */
+  .scrollToTopBtn {
+    position: fixed;
+    bottom: 30px; /* Position from the bottom */
+    right: 30px;  /* Position from the right */
+    background: linear-gradient(135deg, #b71ec5, #e42cad); /* Gradient background */
+    color: white;
+    border: none;
+    border-radius: 12px; /* Rounded corners, not oval */
+    padding: 15px 25px; /* Adjusted padding for a square shape */
+    font-size: 20px; /* Font size */
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    z-index: 9999; /* Ensure it's above other elements */
+    animation: bounce 2s infinite; /* Add bounce animation */
+  }
+  
+  /* Hover effect for the button */
+  .scrollToTopBtn:hover {
+    background: linear-gradient(135deg, aqua, #3e82e9); /* Invert gradient on hover */
+    transform: translateY(-5px); /* Lift button */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Bigger shadow */
+  }
+  
+  /* Smooth transition for appearance */
+  .scrollToTopBtn:focus {
+    outline: none; /* Remove default focus outline */
+  }
+  
+  .scrollToTopBtn:active {
+    transform: translateY(2px); /* Button sinks when clicked */
+  }
+  
+  /* Bounce animation (Keyframe) */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
