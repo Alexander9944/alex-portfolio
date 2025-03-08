@@ -20,7 +20,7 @@ const Skills = () => {
   return (
     <div className="skills-container">
       <section id="skills">
-        <span className="skillTitle">Skills</span>
+        <span className="skillTitle"><h3>Skills</h3></span>
         <span className="skillDesc">
           I am a skilled and passionate web designer with experience in creating <br></br>visually appealing and user-friendly websites. 
           I have a strong understanding of design and a keen eye for detail. I am proficient in HTML, CSS, JavaScript, and React.

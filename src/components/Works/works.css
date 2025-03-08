@@ -1,58 +1,140 @@
-#works{
-    margin: 0 auto;
-    min-height: calc(100vh - 4rem);
-    width: 100vw;
-    max-width: 60rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 1rem;
-
-
+/* Center the entire Works section with spacing on left and right */
+#works {
+    max-width: 75rem; /* Limit max width for better alignment */
+    margin: 0 auto; /* Center the section */
+    padding: 2rem 3rem; /* Add gap on left & right */
+    text-align: center; /* Ensure text is centered */
 }
-.worksTitle{
-    margin: 1rem 0;
-    font-size: 3rem;
 
+/* Grid layout with centering */
+.worksImgs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 images per row for desktop */
+    gap: 1.5rem;
+    justify-items: center; /* Ensure images are centered */
+    margin-top: 2rem;
 }
-.worksDesc{
-    font-weight: 300;
-    font-size: 1rem;
-    max-width: 45rem;
-    
 
-}
-.worksImgs{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    flex-wrap: wrap;
-    width: 100vw;
-    max-width: 65rem;
-    
-}
-.worksImg{
-    object-fit: cover;
-    height: 20rem;
-    margin: 0.5rem;
+/* Prevent image cutoff */
+.workItem {
+    position: relative;
+    border-radius: 10px;
     cursor: pointer;
- }
-
-.worksBtn{
-        margin:3rem 0rem ;
-        padding: 0.5rem 2.5rem;
-        border: none;
-        border-radius:2rem ;
-        background: white;
-        font-size: 1rem;
+    overflow: visible; /* Allow zoom effect */
+    transition: transform 0.3s ease-in-out;
 }
-    @media screen and (max-width: 585px) {
-        .worksImg{
-            height: 48vw;
 
-        }
+/* Ensure images scale smoothly */
+.worksImg {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* On hover, zoom in without clipping */
+.workItem:hover .worksImg {
+    transform: scale(1.2);
+    z-index: 2; /* Bring the image to the front */
+    position: relative;
+}
+
+/* Overlay effect */
+.workOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.workItem:hover .workOverlay {
+    opacity: 1;
+}
+
+.workText {
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+/* Works Title Styling */
+.worksTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Hover Effect: Scale & Color Change */
+.worksTitle:hover {
+    transform: scale(1.1);
+    color: aqua;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+/* Underline Animation */
+.worksTitle::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: aqua;
+    transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+}
+
+/* Expand underline on hover */
+.worksTitle:hover::after {
+    width: 100%;
+    left: 0;
+}
+/* worksDesc Styling */
+/* worksDesc Styling */
+.worksDesc {
+    font-size: 1.rem;
+    margin-top: 15px;
+    line-height: 1.5;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    display: inline-block;  /* Make sure it takes only the necessary width */
+    overflow: hidden; /* Avoid content overflow during zoom */
+  }
+  
+  /* Zoom-in Effect on Hover */
+  .worksDesc:hover {
+    transform: scale(1.05);  /* Enlarge text */
+    color: aqua;  /* Optional: Change color */
+  }
+  
+  
+/* Responsive Grid */
+@media screen and (max-width: 1024px) { /* Tablets */
+    #works {
+        padding: 2rem 2rem; /* Reduce side padding */
     }
+    .worksImgs {
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+    }
+}
 
+@media screen and (max-width: 720px) { /* Mobile */
+    #works {
+        padding: 2rem 1rem; /* Reduce padding for small screens */
+    }
+    .worksImgs {
+        grid-template-columns: repeat(1, 1fr); /* 1 image per row */
+    }
+}

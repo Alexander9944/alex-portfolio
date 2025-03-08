@@ -7,24 +7,67 @@
     overflow: hidden;
   }
   
-  /* Skill Title */
-  .skillTitle {
-    font-size: 2rem;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 10px;
-    text-align: center;
-  }
+ /* Skills Title Styling */
+.skillTitle h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Hover Effect: Scale & Color Change */
+.skillTitle h3:hover {
+  transform: scale(1.1);
+  color: aqua;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+/* Underline Animation */
+.skillTitle h3::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background-color: aqua;
+  transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+}
+
+/* Expand underline on hover */
+.skillTitle h3:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+
   
   /* Skill Description */
   .skillDesc {
     font-size: 1rem;
     max-width: 90%;
-    margin: 0 auto 20px;
+    margin: 15px auto 20px;
     display: block;
     text-align: center;
     line-height: 1.5;
   }
+  /* skillDesc Styling */
+.skillDesc {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Zoom-in Effect on Hover */
+.skillDesc:hover {
+  transform: scale(1.05);
+  color: aqua; /* Optional: Change color on hover */
+}
+
   
   /* Scrolling Container */
   .skills-slider {

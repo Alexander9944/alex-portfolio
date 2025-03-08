@@ -1,66 +1,69 @@
 .navbar {
-   background: rgb(30,30,30) ;
-    height: 5rem ;
-    width :100 vw;
-    max-width: 75rem;
-    margin:0 auto;
+    background-color: rgb(30, 30, 30);
+    height: 5rem;
+    width: 100%; /* Ensure it spans the full width */
+    margin: 0;
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position:sticky;
-    top :0;
-z-index:3 ;
-
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
 }
+
+/* Ensure logo scales properly */
 .logo {
     object-fit: contain;
-    height: 15rem;
-    width: 8rem;
-
+    height: 4rem; /* Adjusted height */
+    width: auto; /* Maintain aspect ratio */
 }
-.desktopMenuListItem{
-    
+
+.desktopMenuListItem {
     color: white;
-    margin:1rem ;
-    cursor: pointer; 
-
+    margin: 1rem;
+    cursor: pointer;
 }
 
-.desktopMenuImg{
+.desktopMenuImg {
     object-fit: cover;
     height: 1rem;
     width: 1rem;
     margin: 1rem;
-    
 }
-.desktopMenuListItem:hover{
-    color:aqua;
-    padding-bottom : 0.5rem;
-    border-bottom : 3px solid aqua;
+
+.desktopMenuListItem:hover {
+    color: aqua;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid aqua;
 }
-.desktopMenuBtn{
-    background:white;
-    color:black;
+
+.desktopMenuBtn {
+    background: white;
+    color: black;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 1rem;
-    border-radius:2rem ;
+    border-radius: 2rem;
 }
-.active{
-    color:aqua;
-    padding-bottom : 0.5rem;
-    border-bottom : 3px solid aqua;
+
+.active {
+    color: aqua;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid aqua;
 }
-.mobMenu{
+
+.mobMenu {
     display: none;
     object-fit: cover;
     height: 1.8rem;
-
 }
-.navMenu{
+
+.navMenu {
     position: absolute;
     top: 4rem;
     right: 2rem;
@@ -70,27 +73,26 @@ z-index:3 ;
     padding: 0.5rem;
     height: fit-content;
     min-width: 15rem;
-    background: rgb(40,40,40);
+    background: rgba(40, 40, 40, 0.9); /* Slight transparency */
     border-radius: 1rem;
-
-
 }
+
 .listItem {
     color: white;
     padding: 0.5rem 3rem;
     margin: 0.25rem;
-    background: rgb(30,30,30);
-
-}
-@media screen and (max-width:720px) { 
-    .mobMenu{
-        display:flex
-    }
-    .desktopMenu{
-        display: none;
-    }
-    .desktopMenuBtn{
-        display: none;
-    }
+    background: rgb(30, 30, 30);
 }
 
+/* Mobile responsiveness */
+@media screen and (max-width: 720px) {
+    .mobMenu {
+        display: flex;
+    }
+    .desktopMenu {
+        display: none;
+    }
+    .desktopMenuBtn {
+        display: none;
+    }
+}
