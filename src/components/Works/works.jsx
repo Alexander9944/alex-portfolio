@@ -10,7 +10,7 @@ import drumkit from '../../assets/drumkit.png';
 const Works = () => {
   const projects = [
     { link: 'https://dice-game-alex.netlify.app/', img: dicegame, title: 'Dice Game' },
-    { link: 'https://github.com/yourusername/tomatoapp', img: tomatoapp, title: 'Tomato App' },
+    { link: 'https://tomato-food-delivery-app-by-alex.netlify.app/', img: tomatoapp, title: 'Tomato App' },
     { link: 'https://tindog-chat-site.netlify.app/', img: tindog, title: 'Tindog' },
     { link: 'https://github.com/yourusername/keeperapp', img: keeperapp, title: 'Keeper App' },
     { link: 'https://github.com/yourusername/emojipedia', img: emojipedia, title: 'Emojipedia' },
