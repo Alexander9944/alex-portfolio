@@ -1,5 +1,10 @@
 .navbar {
-    background-color: rgb(30, 30, 30);
+    position: fixed;
+    backdrop-filter: blur(15px); /* Blurred background effect */
+    background: rgba(255, 255, 255, 0.2); /* Slight transparency */
+    
+    z-index: 1000; /* Ensures it stays above other elements */
+    
     height: 5rem;
     width: 100%; /* Ensure it spans the full width */
     margin: 0;
@@ -12,6 +17,7 @@
     left: 0;
     right: 0;
     z-index: 3;
+    
 }
 
 /* Ensure logo scales properly */

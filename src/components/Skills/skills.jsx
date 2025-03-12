@@ -5,7 +5,7 @@ import js from '../../assets/icons8-javascript-96.png';
 import react from '../../assets/icons8-react-80.png';
 import node from '../../assets/icons8-nodejs-96.png';
 import mongodb from '../../assets/icons8-mongo-db-96.png';
-import github from '../../assets/icons8-github-logo-94.png';
+import github from '../../assets/gthub logo.png';
 import npm from '../../assets/icons8-npm-96.png';   
 import html from '../../assets/icons8-html-logo-96.png';
 import express from '../../assets/icons8-express-js-96.png';

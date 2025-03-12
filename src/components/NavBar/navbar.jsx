@@ -14,24 +14,32 @@ const Navbar = () => {
   <nav className="navbar">
 <img src={logo} alt="logo" className='logo'/>
  <div className="desktopMenu">
-  <Link  activeClass="active" to='intro' spy={true} offset={-100}  duration={500} className="desktopMenuListItem" >Home</Link>
-  <Link activeClass="active" to='skills' spy={true} offset={-50}  duration={500}  className="desktopMenuListItem" >About</Link>
-  <Link activeClass="active" to='works' spy={true} offset={-55}  duration={500}  className="desktopMenuListItem" >Portfolio</Link>
+  <Link  activeClass="active" to='intro' spy={true} offset={-100}  duration={500} className="desktopMenuListItem" smooth={true}>Home</Link>
+  <Link activeClass="active" to='skills' spy={true} offset={-50}  duration={500}  className="desktopMenuListItem" smooth={true}>About</Link>
+  <Link activeClass="active" to='works' spy={true} offset={-55}  duration={500}  className="desktopMenuListItem" smooth={true}>Portfolio</Link>
   
 
  </div>
- <button className="desktopMenuBtn" onClick={()=>{
-     document.getElementById('contactPage').scrollIntoView({behavior:'smooth'});
- }}>
- <img src={contactImg} alt="" className="desktopMenuImg" />Contact Me</button>
- 
+ <Link
+  to="contactPage"
+  spy={true}
+  smooth={true}
+  offset={-100} /* Adjust to prevent navbar overlap */
+  duration={500}
+  className="desktopMenuBtn"
+  onClick={() => setShowMenu(false)}
+>
+  <img src={contactImg} alt="" className="desktopMenuImg" />
+  Contact Me
+</Link>
+
  <img src={menu} alt="logo" className='mobMenu' onClick={()=>setShowMenu(!showMenu)}/>
- <div className="navMenu" style={{display:showMenu? 'flex':'none'}}>
-  <Link  activeClass="active"  className="listItem" onClick={()=>setShowMenu(false)}>Home</Link>
-  <Link activeClass="active"  className="listItem" onClick={()=>setShowMenu(false)}>About</Link>
-  <Link  activeClass="active" className="listItem" onClick={()=>setShowMenu(false)} >Portfolio</Link>
- 
- </div>
+ <div className="navMenu" style={{ display: showMenu ? 'flex' : 'none' }}>
+  <Link to="intro" spy={true} smooth={true} offset={-100} duration={500} className="listItem" onClick={() => setShowMenu(false)}>Home</Link>
+  <Link to="skills" spy={true} smooth={true} offset={-100} duration={500} className="listItem" onClick={() => setShowMenu(false)}>About</Link>
+  <Link to="works" spy={true} smooth={true} offset={-55} duration={500} className="listItem" onClick={() => setShowMenu(false)}>Portfolio</Link>
+</div>
+
  </nav>
 
     

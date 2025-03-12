@@ -5,6 +5,8 @@ import instagramIcon from '../../assets/Instagram1-removebg-preview.png';
 import twitterIcon from '../../assets/icons8-twitter-96.png';
 import youtubeIcon from '../../assets/icons8-youtube-96.png';
 import whatsappIcon from '../../assets/WA-removebg-preview.png';
+import linkedinIcon from '../../assets/linkedin bg rmvd.png';
+import githubIcon from '../../assets/gthub logo.png';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -38,6 +40,12 @@ console.log("Sending email...");
                 <button className='submitBtn' value="send" type="submit">Send</button>
                 <div className='links'> 
               
+                <a href="https://github.com/Alexander9944" target="_blank" rel="noopener noreferrer">
+       <img className='link' src={githubIcon} alt='linkedin'/>
+   </a>
+                <a href="https://www.linkedin.com/in/alexander-abraham-5814251b7" target="_blank" rel="noopener noreferrer">
+       <img className='link' src={linkedinIcon} alt='linkedin'/>
+   </a>
    <a href="https://www.facebook.com/Alexander Abraham" target="_blank" rel="noopener noreferrer">
        <img className='link' src={facebookIcon} alt='Facebook'/>
    </a>

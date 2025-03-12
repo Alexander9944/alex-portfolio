@@ -42,6 +42,29 @@
   .scrollToTopBtn:active {
     transform: translateY(2px); /* Button sinks when clicked */
   }
+  .contact-info {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .contact-info a {
+    color: aqua;
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  
   
   /* Bounce animation (Keyframe) */
   @keyframes bounce {
