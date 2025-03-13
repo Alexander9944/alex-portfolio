@@ -89,7 +89,25 @@
     margin: 0.25rem;
     background: rgb(30, 30, 30);
 }
-
+.contact-info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease-in-out;
+  }
+  .contact-item:hover {
+    color: aqua; /* Match your website theme */
+  }
+  
 /* Mobile responsiveness */
 @media screen and (max-width: 720px) {
     .mobMenu {
