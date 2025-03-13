@@ -107,6 +107,34 @@
   .contact-item:hover {
     color: aqua; /* Match your website theme */
   }
+  .contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-items {
+    display: flex;
+    gap: 20px; /* Space between phone and email */
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .contact-item:hover {
+    color: #00ffff; /* Aqua color effect */
+  }
+  
+  .email-item {
+    margin-left: 10px; /* Ensures email is to the right */
+  }
   
 /* Mobile responsiveness */
 @media screen and (max-width: 720px) {
