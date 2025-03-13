@@ -24,11 +24,11 @@ const Navbar = () => {
           rotate: [0, 2, -2, 0] // Subtle rotation effect
         }}
         transition={{ 
-          duration: 3, 
-          repeat: Infinity, 
+          duration: 3, // Slow movement
+          repeat: Infinity, // Loop infinitely
           ease: "easeInOut" 
         }}
-        whileHover={{ scale: 1.1 }}
+        whileHover={{ scale: 1.1 }} // Slight scaling on hover
       />
 
       <div className="desktopMenu">
@@ -36,25 +36,19 @@ const Navbar = () => {
         <Link activeClass="active" to='skills' spy={true} offset={-50} duration={500} className="desktopMenuListItem" smooth={true}>About</Link>
         <Link activeClass="active" to='works' spy={true} offset={-55} duration={500} className="desktopMenuListItem" smooth={true}>Portfolio</Link>
       </div>
-
-      {/* Contact Info: Phone and Email Side-by-Side */}
+      
       <motion.div 
         className="contact-info" 
         initial={{ opacity: 0 }} 
         animate={{ opacity: 1 }} 
         transition={{ duration: 0.5 }}
       >
-        <div className="contact-items">
-          <a href="tel:+919944314849" className="contact-item">
-            <Phone size={20} /> +91 99443 14849
-          </a>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=anderalex789@gmail.com" 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             className="contact-item email-item">
-            <Mail size={20} /> anderalex789@gmail.com
-          </a>
-        </div>
+        <a href="tel:+919944314849" className="contact-item">
+          <Phone size={20} /> +91 99443 14849
+        </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=anderalex789@gmail.com" target="_blank" rel="noopener noreferrer" className="contact-item">
+          <Mail size={20} /> anderalex789@gmail.com
+        </a>
       </motion.div>
       
       <Link to="contactPage" spy={true} smooth={true} offset={-100} duration={500} className="desktopMenuBtn" onClick={() => setShowMenu(false)}>
@@ -72,4 +66,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar; 

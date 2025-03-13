@@ -173,3 +173,14 @@
         background-position: 1000px;
     }
 }
+/* Default Background Styling */
+
+  
+  /* Reduce Background Size for Screens < 720px */
+  @media screen and (max-width: 720px) {
+    .bg {
+      height: 50vh;  /* Reduce height to 50% of viewport */
+      background-size: contain;  /* Ensure the whole image is visible */
+    }
+  }
+  
