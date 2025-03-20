@@ -21,10 +21,10 @@ const Navbar = () => {
         animate={{
           opacity: 1,
           y: [0, -10, 0], // Floating effect
-          rotate: [0, 6, -4, 0] // Subtle rotation effect
+          rotate: [0, 1, -2, 0] // Subtle rotation effect
         }}
         transition={{ 
-          duration: 1, // Slow movement
+          duration: 2, // Slow movement
           repeat: Infinity, // Loop infinitely
           ease: "easeInOut" 
         }}
