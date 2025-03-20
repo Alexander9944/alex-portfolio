@@ -3,7 +3,7 @@ import './intro.css';
 import bg from "../../assets/alex photo.png";
 import btnImg from '../../assets/icons8-hire-me-50.png';
 import downloadBtn from '../../assets/downloads.png';
-import { Link } from 'react-scroll';
+
 
 
 
@@ -21,7 +21,13 @@ const Intro = () => {
               <img src={btnImg} alt="hire me" className='btnImg' />Hire Me
             </button>
           </a>
-         <Link><button className="resumeBtn"><img src={downloadBtn} alt="resume" className='downloadBtn' />My Resume</button></Link>
+          <a href="resume.pdf" download="Alexander_WebDeveloper.pdf">
+  <button className="resumeBtn">
+    <img src={downloadBtn} alt="resume" className='downloadBtn' />
+    My Resume
+  </button>
+</a>
+
          </div>
    </div>
 

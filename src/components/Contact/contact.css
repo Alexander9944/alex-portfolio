@@ -61,7 +61,8 @@
     object-fit: cover;
     height: 3rem ;
     width: 3rem;
-    margin: 0 0.75rem;
+    margin-left: 1rem;
+    margin-right:  0rem ;
     cursor: pointer;  
 }
 .link:hover{

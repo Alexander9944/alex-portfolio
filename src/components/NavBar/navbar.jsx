@@ -21,10 +21,10 @@ const Navbar = () => {
         animate={{
           opacity: 1,
           y: [0, -10, 0], // Floating effect
-          rotate: [0, 2, -2, 0] // Subtle rotation effect
+          rotate: [0, 6, -4, 0] // Subtle rotation effect
         }}
         transition={{ 
-          duration: 3, // Slow movement
+          duration: 1, // Slow movement
           repeat: Infinity, // Loop infinitely
           ease: "easeInOut" 
         }}
@@ -59,7 +59,7 @@ const Navbar = () => {
       <img src={menu} alt="menu" className='mobMenu' onClick={() => setShowMenu(!showMenu)}/>
       <div className="navMenu" style={{ display: showMenu ? 'flex' : 'none' }}>
         <Link to="intro" spy={true} smooth={true} offset={-100} duration={500} className="listItem" onClick={() => setShowMenu(false)}>Home</Link>
-        <Link to="skills" spy={true} smooth={true} offset={-100} duration={500} className="listItem" onClick={() => setShowMenu(false)}>About</Link>
+        <Link to="skills" spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={() => setShowMenu(false)}>About</Link>
         <Link to="works" spy={true} smooth={true} offset={-55} duration={500} className="listItem" onClick={() => setShowMenu(false)}>Portfolio</Link>
       </div>
     </nav>
